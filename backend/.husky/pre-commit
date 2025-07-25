@@ -1,0 +1,7 @@
+echo "Running pnpm lint..."
+pnpm lint || { echo "Linting failed! Please fix the issues before committing."; exit 1; }
+
+echo "Running pnpm format..."
+pnpm format || { echo "Formatting failed! Please fix the issues or commit the formatted changes."; exit 1; }
+
+echo "Pre-commit checks passed! ✨"
